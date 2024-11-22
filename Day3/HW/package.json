@@ -1,0 +1,20 @@
+{
+  "name": "array-helper-utils",
+  "version": "1.0.1",
+  "description": "A Node.js package to add helpful Higher-Order Functions (HOFs) to arrays.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node test.js"
+  },
+  "keywords": [
+    "array",
+    "helper",
+    "higher-order-functions",
+    "utility"
+  ],
+  "author": "Yash Mankar",
+  "license": "MIT",
+  "dependencies": {
+    "array-helper": "^0.0.1"
+  }
+}

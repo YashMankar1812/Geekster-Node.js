@@ -1,0 +1,20 @@
+{
+  "name": "binary_search_utils",
+  "version": "1.0.0",
+  "description": "`binary-search-utils` is a lightweight Node.js package providing efficient binary search functionality. Ideal for sorted datasets, this package allows you to quickly search for elements with ease.",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node test.js"
+  },
+  "keywords": [
+    "binary",
+    "search",
+    "utility"
+  ],
+  "dependencies": {
+    "license": "MIT",
+    "array-helper": "^0.0.1"
+  },
+  "author": "Yash Mankar",
+  "license": "ISC"
+}
