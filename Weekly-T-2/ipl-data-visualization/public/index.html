@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPL Data Visualization</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>IPL Data Visualization</h1>
+  <canvas id="orangeCapChart"></canvas>
+  <canvas id="mostFoursChart"></canvas>
+  <canvas id="mostSixesChart"></canvas>
+  <canvas id="mostCenturiesChart"></canvas>
+  <canvas id="mostFiftiesChart"></canvas>
+
+  <script>
+    // Fetch data from the API
+    fetch('/api/stats')
+      .then((response) => response.json())
+      .then((data) => {
+        const createChart = (ctx, title, dataset) => {
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: dataset.map((d) => d.player),
+              datasets: [{
+                label: title,
+                data: dataset.map((d) => parseInt(d.runs, 10)),
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+              }]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                legend: { display: false },
+                title: { display: true, text: title },
+              },
+            },
+          });
+        };
+
+        // Create charts for each category
+        createChart(document.getElementById('orangeCapChart'), 'Top Orange Cap Players', data.orange_cap);
+        createChart(document.getElementById('mostFoursChart'), 'Top Most Fours Players', data.most_4s);
+        createChart(document.getElementById('mostSixesChart'), 'Top Most Sixes Players', data.most_6s);
+        createChart(document.getElementById('mostCenturiesChart'), 'Top Most Centuries Players', data.most_centuries);
+        createChart(document.getElementById('mostFiftiesChart'), 'Top Most Fifties Players', data.most_fifties);
+      });
+  </script>
+</body>
+</html>
