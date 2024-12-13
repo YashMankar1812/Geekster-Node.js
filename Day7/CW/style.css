@@ -1,0 +1,77 @@
+/* Resetting some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #6a11cb, #2575fc);
+    color: #fff;
+  }
+  
+  /* Main container styling */
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  /* Heading styling */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Form styling */
+  .url-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .url-form label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-align: left;
+    color: #fff;
+  }
+  
+  .url-form input[type="url"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none;
+  }
+  
+  .url-form input[type="url"]:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    background: #f9f9f9;
+  }
+  
+  /* Button styling */
+  .url-form button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .url-form button:hover {
+    background: #45a049;
+  }
+  
